@@ -1,5 +1,88 @@
-<html>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Zia — Portfolio</title>
+    <meta name="description" content="Zia's personal website: projects, blog, contact" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <link rel="stylesheet" href="./styles.css" />
+</head>
 <body>
-Hello Zia
+<div class="container">
+    <header>
+        <div class="brand">
+            <div class="logo" aria-hidden="true">Z</div>
+            <div>
+                <div style="font-weight:700">Zia</div>
+                <div class="muted" style="font-size:13px">Software Engineer • Maker</div>
+            </div>
+        </div>
+
+        <nav aria-label="Main navigation">
+            <a href="./index.html" class="nav-link">Home</a>
+            <a href="./blog.html" class="nav-link">Blog</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <a href="https://stackoverflow.com/users/9258528/kazi-ziaul-hassan" target="_blank" rel="noopener" class="muted small">StackOverflow</a>
+            <a href="https://github.com/Crackeree" target="_blank" rel="noopener" class="muted small">GitHub</a>
+            <a href="https://www.linkedin.com/in/kazi-ziaul-hassan/" target="_blank" rel="noopener" class="muted small">LinkedIn</a>
+        </nav>
+
+        <button class="nav-toggle" onclick="toggleNav()" aria-label="Toggle menu">☰</button>
+    </header>
+
+    <main>
+        <section class="hero" id="about">
+            <div>
+                <h1>Hi — I'm Zia.</h1>
+                <p class="lead">I build backend systems and small delightful web experiences. I enjoy clean code, thoughtful APIs, and teaching through writing.</p>
+                <div class="cta">
+                    <a class="btn" href="#projects">See my projects</a>
+                </div>
+            </div>
+
+            <div class="hero-media" style="align-self:center">
+                <img alt="profile" src="https://via.placeholder.com/320x200?text=Zia" style="width:100%;border-radius:10px;display:block"/>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 style="margin-top:6px">Selected projects</h2>
+            <div class="grid">
+                <article class="card">
+                    <h3>Project A</h3>
+                    <p class="muted">Short description — what it does and tech used (Spring Boot, Kafka, etc.).</p>
+                    <p style="margin-top:10px"><a href="#">View repo →</a></p>
+                </article>
+
+                <article class="card">
+                    <h3>Project B</h3>
+                    <p class="muted">Short description — maybe a frontend demo or a small game for your wife.</p>
+                    <p style="margin-top:10px"><a href="#">Live demo →</a></p>
+                </article>
+
+                <article class="card">
+                    <h3>Blog / Notes</h3>
+                    <p class="muted">Writeups about design, debugging, and interview prep. Make short friendly posts.</p>
+                    <p style="margin-top:10px"><a href="./blog.html">Read posts →</a></p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" style="margin-top:28px">
+            <h2>Contact</h2>
+            <p class="muted">Email: <a href="mailto:zia@example.com">zia@example.com</a> — replace with your real email or a contact form.</p>
+        </section>
+    </main>
+
+    <footer>
+        © <span id="year"></span> Zia — Built with ❤️ · <span class="muted">Hosted on GitHub Pages</span>
+    </footer>
+
+    <div class="badge">zia.github.io • starter</div>
+</div>
+
+<script src="./scripts.js"></script>
 </body>
 </html>

@@ -1,0 +1,51 @@
+/* CSS */
+:root{
+  --bg:#0f1724; --card:#0b1220; --accent:#60a5fa; --accent-2:#6ee7b7; --muted:#9aa4b2; --text:#e6eef6;
+  --radius:12px; --container:980px; --gap:18px;
+  --glass: rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color:var(--text);background:linear-gradient(180deg,#071028 0%, #071634 60%)}
+.container{max-width:var(--container);margin:0 auto;padding:28px}
+header{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent-2),var(--accent));display:flex;align-items:center;justify-content:center;font-weight:700;color:#052330}
+.name{font-weight:700}
+nav{display:flex;gap:12px;align-items:center}
+a{color:var(--text);text-decoration:none}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.hero{display:grid;grid-template-columns:1fr 420px;gap:24px;padding:36px 0;align-items:center}
+.hero-media img{width:100%;border-radius:12px;display:block}
+.lead{margin:8px 0 0;color:var(--muted);line-height:1.5}
+.cta{margin-top:16px}
+.btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent-2);color:#052330;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+.card{background:var(--glass);padding:16px;border-radius:var(--radius);min-height:120px}
+.card h3{margin:0 0 8px}
+.projects-list{padding:18px 0}
+.project{background:var(--glass);padding:14px;border-radius:10px;margin-top:12px}
+footer{margin-top:48px;padding:22px 0;border-top:1px solid rgba(255,255,255,0.03);text-align:center;color:var(--muted)}
+.badge{position:fixed;right:16px;bottom:16px;background:rgba(6,11,20,0.6);padding:10px 12px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);font-size:13px;color:var(--muted)}
+
+/* Active nav */
+.nav-link{padding:6px 8px;border-radius:8px;opacity:0.95}
+.nav-link.active{background:rgba(255,255,255,0.04);box-shadow:inset 0 -2px 0 rgba(0,0,0,0.2);font-weight:600}
+
+/* Responsive */
+.nav-toggle{display:none;background:transparent;border:0;color:var(--text);font-size:20px}
+@media (max-width:880px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  header{gap:10px}
+  nav{display:none}
+  .nav-toggle{display:block}
+}
+@media (max-width:560px){
+  .grid{grid-template-columns:1fr}
+  .hero{grid-template-columns:1fr;padding:20px 0}
+  h1{font-size:22px}
+}
+
+/* Small utilities */
+.hidden{display:none}
+
